@@ -13,17 +13,10 @@
 
 <body>
 
-    <nav class="py-2  border-bottom">
-        <div class="container d-flex flex-wrap">
-            <ul class="nav me-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link link-body-emphasis px-2 active"
-                        aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Listado</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Calculadora</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About</a></li>
-            </ul>
-            <div class=" py-2 gap-3 d-md-flex">
+    <nav class="py-2  border-bottom ">
+        <div class="container d-flex justify-content-between flex-wrap">
+            <img src="img/CRYPTODATE-fotor-2024053016650.png"alt="logo" class="logotipo mx-auto">
+            <div class=" py-2 gap-3 d-md-flex mx-auto mt-2">
                 <a href="./pages/cotiza.html"><button type="button" class="btn btn-primary btn-sm  mx-auto me-sm-3">Corizar Criptomoneda</button></a>
                 <a href="./pages/listado.html"><button type="button" class="btn btn-outline-primary btn-sm  mx-auto">Listado de Criptomonedas</button></a>
             </div>
@@ -36,23 +29,18 @@
 
     <section class="container">
         <div class="mt-4">
-            <div class="contenedorCripto ">
+            <div class="contenedorCripto border ">
+                <h1 class="text-center">Explora la Criptoeconomía</h1>
                 <h2 id="market-change" class="mt-2 mb-4 porcentajeGlobal"></h2>
-
                 <input type="text" id="search" placeholder="Buscar criptomoneda...">
-                <div class="container d-flex justify-content-center mb-5 mt-2">
-                    <h3 class="informacionBusqueda mx-auto text-center">Make sure to write the Symbol of the
-                        cryptocurrency
-                        Ex: BTC, ETH, BNB...
-                    </h3>
-                </div>
                 <div class="container d-flex justify-content-center">
                     <div class="loader"></div>
                 </div>
+               <div class="container-fluid d-flex justify-content-center">
                 <table id="crypto-table" class="contenedorCripto">
-                    <thead>
+                    <thead >
                         <tr>
-                            <th>Símbolo</th>
+                            <th class="simbolos">Símbolo</th>
                             <th>Precio (Binance)</th>
                             <th>Capitalización</th>
                             <th>Movimiento (última hora)</th>
@@ -63,6 +51,7 @@
                     <tbody>
                     </tbody>
                 </table>
+               </div>
                 <div class="container d-flex justify-content-center">
                     <div class="loader"></div>
                 </div>

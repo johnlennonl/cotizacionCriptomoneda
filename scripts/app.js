@@ -65,8 +65,8 @@ fetch('https://api.binance.com/api/v3/ticker/price')
                 // Crear el elemento de la imagen del icono
                 const img = document.createElement('img');
                 img.src = crypto.image;
-                img.width = 20;
-                img.height = 20;
+                img.width = 15;
+                img.height = 15;
 
                 // Crear el elemento de texto para el símbolo
                 const symbolText = document.createTextNode(crypto.symbol.toUpperCase());
