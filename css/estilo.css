@@ -7,6 +7,7 @@ body {
     width: 200px;
 }
 /* tabla estilos */
+
 .contenedorCripto {
   text-align: center;
   background-color: #ffffff;
@@ -67,8 +68,8 @@ img {
 @media screen and (max-width: 768px) {
   th,
   td {
-    padding: 6px;
-    font-size: 11px;
+    padding: 4px;
+    font-size: 10px;
   }
 
   table {
@@ -81,18 +82,16 @@ img {
     padding: 8px;
   }
 }
-.simbolos{
-    align-items: start;
-}
+
 @media screen and (max-width: 480px) {
   th,
   td {
-    padding: 4px;
-    font-size: 9px;
+    padding: 2px;
+    font-size: 7px;
   }
 
   table {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   #search {
