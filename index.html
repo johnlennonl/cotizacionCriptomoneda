@@ -31,30 +31,31 @@
 
     <section class="container">
         <div class="mt-4">
-            <div class="contenedorCripto border ">
+            <div class="contenedorCripto border">
                 <h1 class="text-center">Explora la Criptoeconomía</h1>
                 <h2 id="market-change" class="mt-2 mb-4 porcentajeGlobal"></h2>
                 <input type="text" id="search" placeholder="Buscar criptomoneda...">
+                <div class="btn-group my-3" role="group" aria-label="Table View Options">
+                    <button type="button" class="btn btn-primary" id="full-view">Vista Completa</button>
+                    <button type="button" class="btn btn-secondary" id="mobile-view">Vista Simplificada</button>
+                </div>
                 <div class="container d-flex justify-content-center">
                     <div class="loader"></div>
                 </div>
                 <div class="container d-flex justify-content-center">
-                    <table id="crypto-table" class="contenedorCripto container ">
-                        <div class="mx-auto">
-                            <thead>
-                                <tr>
-                                    <th >Símbolo</th>
-                                    <th>Precio (Binance)</th>
-                                    <th>Capitalización</th>
-                                    <th>Movimiento (última hora)</th>
-                                    <th>Movimiento (24h)</th>
-    
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                        </div>
+                    <table id="crypto-table" class="contenedorCripto container">
+                        <thead>
+                            <tr>
+                                <th>Símbolo</th>
+                                <th>Precio (Binance)</th>
+                                <th class="desktop-only">Capitalización</th>
+                                <th>Movimiento (última hora)</th>
+                                <th>Movimiento (24h)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="container d-flex justify-content-center">
                     <div class="loader"></div>
@@ -62,6 +63,8 @@
             </div>
         </div>
     </section>
+
+    
     <script src="./scripts/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
