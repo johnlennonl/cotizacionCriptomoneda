@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="css/estilo.css">
     <!-- Incluye Chart.js desde CDN para gráficos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+<link href='https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
     <!-- Barra de navegación -->
-    <nav class="py-2 border-bottom">
+    <nav class="py-2 ">
         <div class="container d-flex justify-content-between flex-wrap">
             <div class="py-2 gap-3 d-md-flex mx-auto mt-2">
                 <!-- Enlace a la página de cotización de criptomonedas -->
@@ -33,18 +35,13 @@
     </nav>
 
     <!-- Sección principal -->
-    <section class="container-fluid">
+    <section class="container">
         <div class="mt-4">
             <div class="contenedorCripto">
                 <h1 class="text-center titulo">Explora la Criptoeconomía</h1>
                 <h2 id="market-change" class="mt-2 mb-4 porcentajeGlobal"></h2>
                 <!-- Campo de búsqueda de criptomonedas -->
                 <input type="text" id="search" placeholder="Buscar criptomoneda...">
-                
-                <!-- Loader para indicar carga de datos -->
-                <div class="container-fluid d-flex justify-content-center">
-                    <div class="loader"></div>
-                </div>
                 <!-- Tabla de criptomonedas -->
                 <div class="container-fluid d-flex justify-content-center">
                     <table id="crypto-table" class="container-fluid">
@@ -62,10 +59,7 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- Otro loader para indicar carga de datos -->
-                <div class="container d-flex justify-content-center">
-                    <div class="loader"></div>
-                </div>
+            
             </div>
         </div>
     </section>

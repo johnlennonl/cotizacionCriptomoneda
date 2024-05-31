@@ -1,51 +1,51 @@
 // Obtener los precios de las criptomonedas desde Binance
 fetch("https://api.binance.com/api/v3/ticker/price")
   .then((response) => response.json()) // Parsear la respuesta JSON
-  .then((binanceData) => {
+    .then((binanceData) => {
     const binanceMap = {}; // Crear un objeto para mapear los datos de Binance
     binanceData.forEach((crypto) => {
-      binanceMap[crypto.symbol] = {
+        binanceMap[crypto.symbol] = {
         price: parseFloat(crypto.price).toFixed(3), // Guardar el precio con tres decimales
         hourChange: null,
         dayChange: null,
-      };
-    });
+    };
+});
 
     // Obtener cambios porcentuales de las últimas 24 horas desde Binance
     fetch("https://api.binance.com/api/v3/ticker/24hr")
       .then((response) => response.json()) // Parsear la respuesta JSON
-      .then((binanceChangeData) => {
+        .then((binanceChangeData) => {
         let totalChangePercent = 0; // Inicializar la suma de los cambios porcentuales
         let totalCryptos = 0; // Inicializar el contador de criptomonedas
 
         binanceChangeData.forEach((crypto) => {
-          if (binanceMap[crypto.symbol]) {
+            if (binanceMap[crypto.symbol]) {
             binanceMap[crypto.symbol].hourChange = parseFloat(
-              crypto.priceChangePercent
+                crypto.priceChangePercent
             );
             binanceMap[crypto.symbol].dayChange = parseFloat(
-              crypto.priceChangePercent
+            crypto.priceChangePercent
             );
 
             totalChangePercent += binanceMap[crypto.symbol].dayChange; // Acumular el cambio porcentual diario
             totalCryptos++; // Incrementar el contador de criptomonedas
-          }
+        }
         });
 
         const averageChangePercent = totalChangePercent / totalCryptos; // Calcular el cambio porcentual promedio
         const marketChangeHeader = document.getElementById("market-change"); // Obtener el elemento del encabezado del cambio de mercado
         marketChangeHeader.innerHTML = `En las últimas 24 h, el mercado ${
-          averageChangePercent >= 0 ? "subió" : "bajó"
+        averageChangePercent >= 0 ? "subió" : "bajó"
         } un <span style="color: ${
-          averageChangePercent >= 0 ? "green" : "red"
+            averageChangePercent >= 0 ? "green" : "red"
         };">${averageChangePercent.toFixed(2)}%</span>`;
 
         // Obtener datos de CoinGecko para más información sobre las criptomonedas
         return fetch(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+            "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         )
           .then((response) => response.json()) // Parsear la respuesta JSON
-          .then((geckoData) => {
+            .then((geckoData) => {
             const tableBody = document.querySelector("#crypto-table tbody"); // Obtener el cuerpo de la tabla
             tableBody.innerHTML = ""; // Limpiar el contenido actual de la tabla
 
@@ -53,7 +53,7 @@ fetch("https://api.binance.com/api/v3/ticker/price")
               const binanceSymbol = crypto.symbol.toUpperCase() + "USDT"; // Construir el símbolo Binance
               const binancePriceData = binanceMap[binanceSymbol]; // Obtener los datos de precio de Binance
 
-              if (binancePriceData) {
+                if (binancePriceData) {
                 const row = tableBody.insertRow(); // Insertar una nueva fila en la tabla
                 const cell1 = row.insertCell(0); // Insertar celdas en la fila
                 const cell2 = row.insertCell(1);
@@ -69,14 +69,13 @@ fetch("https://api.binance.com/api/v3/ticker/price")
 
                 // Crear y añadir el texto del símbolo y nombre de la criptomoneda
                 const symbolText = document.createTextNode(
-                  crypto.symbol.toUpperCase()
+                    crypto.symbol.toUpperCase()
                 );
-                const nameText = document.createTextNode(` (${crypto.name})`);
+                const nameText = document.createTextNode(` ${crypto.name}`);
 
                 cell1.appendChild(img); // Añadir la imagen a la celda
                 cell1.appendChild(symbolText); // Añadir el símbolo a la celda
-                cell1.appendChild(nameText); // Añadir el nombre a la celda
-                cell1.style.marginRight = "5px"; // Añadir margen derecho a la celda
+                cell1.appendChild(nameText); // Añadir el nombre a la celda/
 
                 // Añadir los datos de precio y cambios porcentuales a las celdas correspondientes
                 cell2.textContent = `$${binancePriceData.price}`;
@@ -92,17 +91,17 @@ fetch("https://api.binance.com/api/v3/ticker/price")
                 // Añadir atributos de datos para búsqueda y filtrado
                 row.setAttribute("data-symbol", crypto.symbol.toUpperCase());
                 row.setAttribute("data-name", crypto.name.toUpperCase());
-              }
+                }
             });
-          });
-      });
-  })
-  .catch((error) =>
+            });
+            });
+    })
+    .catch((error) =>
     console.error(
-      "Error al obtener los datos de la API de Binance o CoinGecko:",
-      error
+        "Error al obtener los datos de la API de Binance o CoinGecko:",
+        error
     )
-  );
+);
 
 // Añadir evento de búsqueda
 document.getElementById("search").addEventListener("input", function () {
@@ -110,7 +109,7 @@ document.getElementById("search").addEventListener("input", function () {
   const table = document.getElementById("crypto-table"); // Obtener la tabla de criptomonedas
   const rows = table.getElementsByTagName("tr"); // Obtener todas las filas de la tabla
 
-  for (let i = 1; i < rows.length; i++) {
+for (let i = 1; i < rows.length; i++) {
     const symbol = rows[i].getAttribute("data-symbol"); // Obtener el símbolo de la criptomoneda
     const name = rows[i].getAttribute("data-name"); // Obtener el nombre de la criptomoneda
     // Mostrar u ocultar filas según el valor de búsqueda
@@ -121,5 +120,5 @@ document.getElementById("search").addEventListener("input", function () {
       rows[i].style.display = "none"; // Ocultar la fila
       rows[i].classList.remove("highlight"); // Eliminar clase de resaltado
     }
-  }
+}
 });
