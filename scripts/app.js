@@ -37,7 +37,7 @@ fetch("https://api.binance.com/api/v3/ticker/price")
         marketChangeHeader.innerHTML = `En las últimas 24 h, el mercado ${
         averageChangePercent >= 0 ? "subió" : "bajó"
         } un <span style="color: ${
-            averageChangePercent >= 0 ? "green" : "red"
+            averageChangePercent >= 0 ? "#5ccb5f" : "red"
         };">${averageChangePercent.toFixed(2)}%</span>`;
 
         // Obtener datos de CoinGecko para más información sobre las criptomonedas
@@ -83,10 +83,10 @@ fetch("https://api.binance.com/api/v3/ticker/price")
                 cell3.classList.add("desktop-only"); // Añadir clase CSS para ocultar en dispositivos móviles
                 cell4.textContent = `${binancePriceData.hourChange}%`;
                 cell4.style.color =
-                  binancePriceData.hourChange >= 0 ? "green" : "red"; // Cambiar color según el valor
+                  binancePriceData.hourChange >= 0 ? "#5ccb5f" : "red"; // Cambiar color según el valor
                 cell5.textContent = `${binancePriceData.dayChange}%`;
                 cell5.style.color =
-                  binancePriceData.dayChange >= 0 ? "green" : "red"; // Cambiar color según el valor
+                  binancePriceData.dayChange >= 0 ? "#5ccb5f" : "red"; // Cambiar color según el valor
 
                 // Añadir atributos de datos para búsqueda y filtrado
                 row.setAttribute("data-symbol", crypto.symbol.toUpperCase());
