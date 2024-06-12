@@ -20,12 +20,16 @@
     <!--Incluye Loader Css-->
     <link rel="stylesheet" href="css/loader.css" />
     <!--Animacion AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Incluye Chart.js desde CDN para gráficos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!--favicon-->
-    <link rel="shortcut icon" href="img/CryptoLogotipo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="img/CryptoLogotipo.png"
+      type="image/x-icon"
+    />
     <!-- Incluye fuente de texto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -33,101 +37,149 @@
       rel="stylesheet"
       type="text/css"
     />
-
   </head>
 
-  <body >
+  <body>
     <!-- Loader -->
     <div id="loader-wrapper" class="loaderContenedor">
       <div id="loader">
-        <div class="bar bar1"></div>
-    <div class="bar bar2"></div>
-    <div class="bar bar3"></div>
-    <div class="bar bar4"></div>
-    <div class="bar bar5"></div>
-    <div class="bar bar6"></div>
-    <div class="bar bar7"></div>
-    <div class="bar bar8"></div>
+        <div class="custom-loader"></div>
       </div>
     </div>
 
-    
-    <section class="contenedorNavegador " data-aos="zoom-in-right">
+    <section class="contenedorNavegador" data-aos="zoom-in-right">
       <!-- Barra de navegación -->
       <div id="navBar" class="container">
         <nav class="d-flex flex-wrap justify-content-center py-3 mb-4">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            
-            <span class=" CryptoLogo ">CoinPreeview</span>
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+          >
+            <span class="CryptoLogo">CoinPreeview</span>
           </a>
-    
+
           <ul class="nav nav-pills">
-            <li class=""><a href="index.html" class="itemNavegador active" >Home</a></li>
+            <li class="">
+              <a href="index.html" class="itemNavegador active">Home</a>
+            </li>
             <li class=""><a href="#" class="itemNavegador">Comprar</a></li>
             <li class=""><a href="#" class="itemNavegador">Vender</a></li>
-            <li class=""><a href="./pages/grafico.html" class="itemNavegador">Grafico</a></li>
-            <li class=""><a href="./pages/cotiza.html" class="itemNavegador">Calculadora</a></li>
-            </ul>
+            <li class="">
+              <a href="./pages/grafico.html" class="itemNavegador">Grafico</a>
+            </li>
+            <li class="">
+              <a href="./pages/cotiza.html" class="itemNavegador"
+                >Calculadora</a
+              >
+            </li>
+          </ul>
         </nav>
       </div>
     </section>
 
     <main id="main-content" class="contenedorCriptomonedas">
       <!-- Sección principal -->
-   
-      <section data-aos="fade-right"  class=" container-fluid contenedorBuscador" >
-        <div class=" container ">
-          <h1 class="text-center titulo">Explora la Criptoeconomía</h1>
-          <h2 id="market-change" class="mt-2 mb-4 porcentajeGlobal"></h2>
-          <!-- Campo de búsqueda de criptomonedas -->
-          <input class="inputSearch" type="text" id="search" placeholder="Buscar criptomoneda..." />
-          <div class="container d-flex justify-content-center contenedorLogo">
-            <img class="logoCriptoMoneda" src=https://img.icons8.com/?size=100&id=63192&format=png&color=000000" alt="btc">
-            <img class="logoCriptoMoneda" src="https://img.icons8.com/?size=100&id=50284&format=png&color=000000" alt="ETH">
-            <img class="logoCriptoMoneda" src="https://img.icons8.com/?size=100&id=XF1f9oTOPWEa&format=png&color=000000" alt="Doge">         
-           </div>
+
+      <header class="header">
+        <div class="container">
+          <div class="px-4 pt-5 my-5 text-center contenedorHeader">
+            <h1 class="display-4 fw-bold tituloPrincipal">
+              El futuro del dinero ha llegado
+            </h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">
+                Somos el espacio más confiable para que las personas y las
+                empresas compren, vendan y gestionen criptomonedas.
+              </p>
+              <div
+                class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"
+              >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Registrate con tu Email"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <button type="button" class="btn btnRegistro btn-lg px-4">
+                  Registrate
+                </button>
+              </div>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh">
+              <div class="container px-5">
+                <img
+                  src="img/Screenshot 2024-06-12 151435.png"
+                  class="img-fluid border rounded-3 shadow-lg mb-4"
+                  alt="Example image"
+                  width="700"
+                  height="500"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </header>
 
-      <div class=" container mt-3 d-flex justify-content-start referencias" data-aos="zoom-in-right" >
-        <h3>Precios de criptomonedas
-        </h3>
+
+      <div class="container">
+        <section data-aos="fade-right" class="contenedorBuscador">
+          <div class="container-fluid contenedorCripto">
+            <h1 class="text-center titulo">Explora la Criptoeconomía</h1>
+            <h2 id="market-change" class="mt-2 mb-4 porcentajeGlobal"></h2>
+            <!-- Campo de búsqueda de criptomonedas -->
+            <input
+              class="inputSearch"
+              type="text"
+              id="search"
+              placeholder="Buscar criptomoneda..."
+            />
+            <div
+              class="container d-flex justify-content-center contenedorLogo"
+            ></div>
+          </div>
+        </section>
       </div>
-
-    <div class=" container d-flex justify-content-center" data-aos="zoom-in">
-      <table id="crypto-table" >
-        <thead>
-          <tr>
-            <th>Símbolo</th>
-            <th>Precio</th>
-            <th class="desktop-only">Capitalización</th>
-            <th>(1h)</th>
-            <th>(24h)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Cuerpo de la tabla que será llenado dinámicamente -->
-        </tbody>
-      </table>
-    </div>
-
-
+      <div
+        class="container mt-3 d-flex justify-content-center referencias"
+        data-aos="zoom-in-right"
+      >
+        <h3>Precios de criptomonedas</h3>
+      </div>
+      <div class="container d-flex justify-content-center" data-aos="zoom-in">
+        <table id="crypto-table">
+          <thead>
+            <tr>
+              <th>Símbolo</th>
+              <th>Precio</th>
+              <th class="desktop-only">Capitalización</th>
+              <th>(1h)</th>
+              <th>(24h)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cuerpo de la tabla que será llenado dinámicamente -->
+          </tbody>
+        </table>
+      </div>
     </main>
     <!--NAVEGADOR-->
     <script src="navAnimate.js"></script>
     <script src="scripts/loader.js"></script>
     <!-- Incluye archivo JavaScript personalizado -->
     <script src="./scripts/app.js"></script>
-   
-    <!-- Incluye Bootstrap JS desde CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-       <!--AOS-->
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-     <script>
-       AOS.init();
-     </script>
 
+    <!-- Incluye Bootstrap JS desde CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
