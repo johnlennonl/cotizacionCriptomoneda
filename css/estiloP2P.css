@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
+
+.btnComprar{
+    width: 100%;
+    border-radius: 0;
+}
+.btnCalcular{
+    width: 100%;
+    border-radius: 0;
+    background-color: #7838d3;
+    border: none;
+}
+
+.btnCalcular:hover{
+    background-color: #6d1bde;
+}
+.contenedorComprar{
+    font-size: 14px;
+    font-family: 'Allerta', sans-serif;
+    background-color: transparent;
+    color: white;
+    width: 400px;   
+    border: none;
+
+}
+.contenedorSolicitudes{
+    font-size: 14px;
+    font-family: 'Allerta', sans-serif;
+    background-color: transparent;
+    color: white;
+    width: 400px;
+    border: none;
+}

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compra de manera segura tu criptomoneda de preferencia">
     <title>Compra y Venta de Criptomoneda</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="../img/CryptoLogotipo.png" type="image/x-icon">
@@ -12,7 +13,9 @@
     <!--Css Estilos-->
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="../css/loader.css">
-    <link rel="stylesheet" href="../css/p2p.css">
+    <link rel="stylesheet" href="../css/estiloP2P.css">
+    <!--Animacion AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Loader -->
@@ -38,7 +41,6 @@
                 <a href="../index.html" class="itemNavegador active">Home</a>
               </li>
               <li class=""><a href="#" class="itemNavegador">Comprar</a></li>
-              <li class=""><a href="#" class="itemNavegador">Vender</a></li>
               <li class="">
                 <a href="grafico.html" class="itemNavegador">Grafico</a>
               </li>
@@ -52,12 +54,12 @@
         </div>
       </section>
      <main id="main-content">
-        <div class="container mt-4">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card">
+        <div class=" container mt-4 d-flex justify-content-center">
+            <div class="row mt-4 ">
+              <div class="col-md-6 ">
+                <div class="card contenedorComprar">
                   <div class="card-body">
-                    <h5 class="card-title">Comprar Criptomoneda</h5>
+                    <h5 class="card-title text-center mb-3">Comprar Criptomoneda</h5>
                     <form id="formulario-compra">
                       <div class="mb-3">
                         <label for="seleccion-cripto" class="form-label">Criptomoneda</label>
@@ -81,17 +83,17 @@
                         <label for="wallet" class="form-label">Wallet o BinancePay</label>
                         <input type="text" class="form-control" id="wallet" required>
                       </div>
-                      <button type="button" class="btn btn-primary" id="calcular-btn">Calcular Solicitud</button>
+                      <button type="button" class="btn btn-primary btnCalcular" id="calcular-btn">Calcular Solicitud</button>
                       <div id="resultado-calculo" class="mt-3"></div>
-                      <button type="submit" class="btn btn-success mt-2">Comprar</button>
+                      <button type="submit" class="btn btn-success mt-2 btnComprar ">Comprar</button>
                     </form>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 mt-4">
-                <div class="card">
+                <div class="card contenedorSolicitudes mx-auto">
                   <div class="card-body">
-                    <h5 class="card-title">Solicitudes Creadas</h5>
+                    <h5 class="card-title text-center mb-3">Solicitudes Creadas</h5>
                     <div id="solicitudes-pendientes">
                       <!-- Solicitudes pendientes serán agregadas aquí -->
                     </div>
@@ -100,7 +102,15 @@
               </div>
             </div>
           </div>
-          
+          <footer>
+            <div class="container">
+              <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+                
+                  <span class="CryptoLogo">CoinPreeview</span>
+               
+              </footer>
+            </div>
+          </footer>
      </main>
       
     <script src="../scripts/p2p.js"></script>

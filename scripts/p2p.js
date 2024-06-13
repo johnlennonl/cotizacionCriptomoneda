@@ -120,7 +120,7 @@ function agregarSolicitudPendienteDOM(solicitud) {
             <p class="card-text">Total en USD: $${solicitud.totalUSD}</p>
             <p class="card-text"><strong>Total con tarifa: $${solicitud.totalConTarifa}</strong></p>
             <button class="btn btn-danger btn-sm" onclick="cancelarSolicitud(this)">Cancelar Solicitud</button>
-            <button class="btn btn-success btn-sm" onclick="completarSolicitud(this)">Solicitud Pagada</button>
+            <button class="btn btn-success btn-sm btnSuccess" onclick="completarSolicitud(this)">Solicitud Pagada</button>
         </div>
     `;
     solicitudesPendientes.appendChild(solicitudCard);

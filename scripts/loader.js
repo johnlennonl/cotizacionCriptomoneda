@@ -7,5 +7,5 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function(){
         document.getElementById('loader-wrapper').style.display = 'none';
         document.getElementById('main-content').classList.remove('hidden-content');
-    },2000);
+    },1000);
 });
