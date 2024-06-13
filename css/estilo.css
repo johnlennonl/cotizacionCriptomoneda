@@ -38,6 +38,7 @@ table {
     margin: 20px 0;
     cursor: pointer;
     max-width: 100%;
+    border-radius: 8px;
 }
 
 
@@ -145,10 +146,8 @@ img {
     background-color: #f6f6f6;
     padding: 20px;
     border-radius: 8px;
-    max-width: 420px;
+    max-width: 100%;
     margin: 0 auto;
-    -webkit-box-shadow: 7px -5px 30px -5px rgba(153, 144, 153, 0.47);
-    -moz-box-shadow: 7px -5px 30px -5px rgba(153, 144, 153, 0.47);
     box-shadow: 7px -5px 30px -5px rgba(153, 144, 153, 0.47);
 }
 
@@ -192,7 +191,7 @@ h1 {
 
 .calculator button {
     padding: 10px 20px;
-    background-color: #64c883;
+    background-color: #7838d3;
     color: rgb(255, 255, 255);
     width: 100%;
     border: none;
@@ -222,15 +221,7 @@ h1 {
     color: white;
 }
 
-.btnGrafico {
-    background-color: #fca311;
-    color: white;
-}
 
-.btnGrafico:hover {
-    background-color: #fbad2f;
-    color: white;
-}
 
 .itemNavegador {
     font-size: 1rem;
@@ -284,6 +275,18 @@ h1 {
     background-color: #7838d3 ;
     color: white;
 }
+.btnRegistro:hover{
+    background-color:  #0a5aa4;
+}
+.btnVerMas{
+    background-color: #7838d3 ;
+    color: white;
+}
+.btnVerMas:hover{
+    background-color:  #0a5aa4;
+    color: white;
+}
+
 .logoEmpresas{
     width: 80px;
     margin: 20px;
