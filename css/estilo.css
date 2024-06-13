@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: repeating-linear-gradient(0deg, rgba(164, 140, 140, 0.03) 0px, rgba(164, 140, 140, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(67.5deg, rgba(164, 140, 140, 0.03) 0px, rgba(164, 140, 140, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(157.5deg, rgba(164, 140, 140, 0.03) 0px, rgba(164, 140, 140, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(164, 140, 140, 0.03) 0px, rgba(164, 140, 140, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(164, 140, 140, 0.03) 0px, rgba(164, 140, 140, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(0deg, rgba(164, 140, 140, 0.03) 0px, rgba(164, 140, 140, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(112.5deg, rgba(164, 140, 140, 0.03) 0px, rgba(164, 140, 140, 0.03) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(22.5deg, rgba(164, 140, 140, 0.03) 0px, rgba(164, 140, 140, 0.03) 1px, transparent 1px, transparent 12px), linear-gradient(90deg, rgb(39, 33, 63), rgb(32, 31, 32));
+    background-image: repeating-linear-gradient(45deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(22.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(45deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(157.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(13,8,63),rgb(36,34,34));
     font-family: 'Allerta', sans-serif;
 }
 
@@ -294,4 +294,20 @@ h1 {
 
 .textoSuscripcion{
     font-size: 0.9rem;
+}
+
+.btnIrArriba{
+    position: fixed;
+    bottom: 35px;
+    right: 10px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.btnIr{
+    width: 60px;
 }

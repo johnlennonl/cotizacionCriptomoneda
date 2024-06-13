@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const cryptoMarketCap = document.getElementById('crypto-market-cap');
     let chart;
 
-    // Fetch Bitcoin data from CoinGecko
+    // Fetch Bitcoin data de CoinGecko
     const coingeckoResponse = await fetch('https://api.coingecko.com/api/v3/coins/bitcoin');
     const coinGeckoInfo = await coingeckoResponse.json();
 
