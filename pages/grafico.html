@@ -46,7 +46,7 @@
           </li>
           <li class=""><a href="p2p.html" class="itemNavegador">Comprar Cripto</a></li>
           <li class="">
-            <a href="grafico.html" class="itemNavegador">Grafico Bitcoin</a>
+            <a href="grafico.html" class="itemNavegador">Bitcoin</a>
           </li>
           <li class="">
             <a href="cotiza.html" class="itemNavegador"
@@ -59,23 +59,32 @@
   </section>
    
       <main id="main-content">
-        <div class="containerGrafico">
-            <h1>Bitcoin (BTC) Price Chart</h1>
+        <div class="container">
+          <h1 class="text-center mt-5">¿Qué es Bitcoin (BTC)?</h1>
+          <!-- Sección principal -->
+          <div id="bitcoin-info" class="container infoBitcoin">
+            <!--Información sobre Bitcoin-->
+          </div>
+        </div>
+        <section class="contenedorPadreChart container ">
+          <div class=" container  containerGrafico">
+            <h2>Bitcoin (BTC) Grafico</h2>
             <div id="crypto-info" class="crypto-info">
                 <img id="crypto-icon" src="" alt="Crypto Icon">
                 <div>
-                    <h2 id="crypto-symbol"></h2>
+                    <h23 id="crypto-symbol"></h23>
                     <p>Price: $<span id="crypto-price"></span></p>
                     <p>Market Cap: $<span id="crypto-market-cap"></span></p>
                 </div>
             </div>
             <canvas id="crypto-chart" ></canvas>
         </div>
+        </section>
         </div>
       </div>
       <footer>
         <div class="container">
-          <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+          <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 mt-5 border-top">
             
               <span class="CryptoLogo">CoinPreeview</span>
            
@@ -85,6 +94,7 @@
       </main>
     
     <script src="../scripts/loader.js"></script>
+    <script src="../scripts/bitcoin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
     <script src="../scripts/grafico.js"></script>
