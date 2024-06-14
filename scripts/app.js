@@ -1,4 +1,4 @@
-// Obtener los precios de las criptomonedas desde Binance
+// Obtenemos los precios de las criptomonedas desde la Api de Binance
 fetch("https://api.binance.com/api/v3/ticker/price")
   .then((response) => response.json()) // Parsear la respuesta JSON
   .then((binanceData) => {
@@ -40,7 +40,7 @@ fetch("https://api.binance.com/api/v3/ticker/price")
           averageChangePercent >= 0 ? "#5ccb5f" : "red"
         };">${averageChangePercent.toFixed(2)}%</span>`;
 
-        // Obtener datos de CoinGecko para más información sobre las criptomonedas
+        // Obtener datos de la Api CoinGecko para más información sobre las criptomonedas
         return fetch(
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         )
@@ -90,10 +90,10 @@ fetch("https://api.binance.com/api/v3/ticker/price")
                   cell3.classList.add("desktop-only"); // Añadir clase CSS para ocultar en dispositivos móviles
                   cell4.textContent = `${binancePriceData.hourChange}%`;
                   cell4.style.color =
-                    binancePriceData.hourChange >= 0 ? "#5ccb5f" : "red"; // Cambiar color según el valor
+                    binancePriceData.hourChange >= 0 ? "#5ccb5f" : "red"; // Cambia el color según el valor
                   cell5.textContent = `${binancePriceData.dayChange}%`;
                   cell5.style.color =
-                    binancePriceData.dayChange >= 0 ? "#5ccb5f" : "red"; // Cambiar color según el valor
+                    binancePriceData.dayChange >= 0 ? "#5ccb5f" : "red"; // Cambia el color según el valor
 
                   // Añadir atributos de datos para búsqueda y filtrado
                   row.setAttribute("data-symbol", crypto.symbol.toUpperCase());

@@ -11,12 +11,12 @@ fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
             seleccionCripto.appendChild(opcion);
         });
 
-        // Cargar solicitudes pendientes del almacenamiento local
+        // Carga de las solicitudes pendientes del almacenamiento local
         cargarSolicitudesPendientes();
     })
     .catch(error => console.error("Error al obtener los datos de CoinGecko:", error));
 
-// Manejar el evento de cálculo de solicitud
+// Manejar el evento de calculo de solicitud
 document.getElementById('calcular-btn').addEventListener('click', function() {
     const seleccionCripto = document.getElementById('seleccion-cripto');
     const montoInput = document.getElementById('monto');
@@ -32,7 +32,7 @@ document.getElementById('calcular-btn').addEventListener('click', function() {
     }
 
     const totalUSD = monto * precioCripto;
-    const totalConTarifa = totalUSD * 1.05; // Añadiendo el 5%
+    const totalConTarifa = totalUSD * 1.05; // Añadimoos el 5%
 
     resultadoCalculo.innerHTML = `
         <div class="alert alert-info">
@@ -43,7 +43,7 @@ document.getElementById('calcular-btn').addEventListener('click', function() {
     `;
 });
 
-// Manejar el evento de envío del formulario de compra
+// evento de envío del formulario de comprat
 document.getElementById('formulario-compra').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -66,7 +66,7 @@ document.getElementById('formulario-compra').addEventListener('submit', function
     }
 
     const totalUSD = monto * precioCripto;
-    const totalConTarifa = totalUSD * 1.05; // Añadiendo el 5%
+    const totalConTarifa = totalUSD * 1.05; // Añadimoz el 5%
 
     const solicitud = {
         cripto: opcionSeleccionada.text,
@@ -175,7 +175,7 @@ function actualizarAlmacenamientoLocal() {
     mostrarMensajeSinSolicitudes();
 }
 
-// Función para mostrar el mensaje de "Sin solicitudes actualmente" si no hay solicitudes pendientes
+// Función para mostrar el mensaje de "Sin solicitudes actualmnte" si no hay solicitudes pendientes
 function mostrarMensajeSinSolicitudes() {
     const solicitudesPendientes = document.getElementById('solicitudes-pendientes');
     if (!solicitudesPendientes.hasChildNodes()) {

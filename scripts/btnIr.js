@@ -1,3 +1,4 @@
+// IrArriba Button 
 const irArriba = document.getElementById("btnIrArriba");
 window.addEventListener("scroll", checkHeight);
 
