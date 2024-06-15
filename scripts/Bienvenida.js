@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Verifica si el usuario ya ha aceptado los términos y condiciones
-  if (!localStorage.getItem("termsAccepted")) {
+  if (!localStorage.getItem("terminosAceptados")) {
     // Muestra la ventana de bienvenida con términos y condiciones
     Swal.fire({
       text: "Por favor, acepta nuestros términos y condiciones para continuar.",
-      imageUrl: "../img/Cryptologotipo.png",
+      imageUrl: "./img/CryptoLogotipo.png",
       imageWidth: 150,
       imageHeight: 150,
       showCancelButton: true,
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).then((result) => {
       if (result.isConfirmed) {
         // Si el usuario acepta, guarda la información en localStorage
-        localStorage.setItem("termsAccepted", "true");
+        localStorage.setItem("terminosAceptados", "true");
         Swal.fire(
           "Aceptado",
           "Gracias por aceptar nuestros términos y condiciones.",
@@ -28,27 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
           "Debe aceptar los términos y condiciones para continuar.",
           "error"
         ).then(() => {
-          // Redirigir a otra página o cerrar la ventana, según tus necesidades
-          // window.location.href = "https://otra-pagina.com";
+          window.location.href = "./index.html";
         });
       }
     });
   }
 });
 
-//btn
-const btnRegistro = document.getElementById("btnRegistro");
 
-btnRegistro.addEventListener("click", () => {
-  swal.fire({
-    title: "Registro exitoso",
-    text: "Gracias por registrarte. ¡Esperamos que disfrutes de nuestra plataforma!",
-    imageUrl: "../img/Cryptologotipo.png",
-    imageWidth: 150,
-    imageHeight: 150,
-    confirmButtonText: "Continuar",
-    confirmButtonColor: "#7838d3",
-    customClass: "swalCustom",
-  }
-  );
-});
