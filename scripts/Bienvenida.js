@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Muestra la ventana de bienvenida con términos y condiciones
     Swal.fire({
       text: "Por favor, acepta nuestros términos y condiciones para continuar.",
-      imageUrl: "./img/CryptoLogotipo.png",
+      image:"../img/CryptoLogotipo.png",
       imageWidth: 150,
       imageHeight: 150,
       showCancelButton: true,
