@@ -3,10 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!localStorage.getItem("terminosAceptados")) {
     // Muestra la ventana de bienvenida con términos y condiciones
     Swal.fire({
+      title:'Bienvenido a CoinPreeview',
       text: "Por favor, acepta nuestros términos y condiciones para continuar.",
-      image:"./img/CryptoLogotipo.png",
-      imageWidth: 150,
-      imageHeight: 150,
+      imageUrl: "https://img.freepik.com/vector-premium/bitcoin-concepto-diseno-vector-plano-negocio-criptomoneda-blockchain_578300-298.jpg",
+      imageWidth: 200,
+      imageHeight: 180,
       showCancelButton: true,
       confirmButtonText: "Aceptar",
       confirmButtonColor: "#7838d3",
