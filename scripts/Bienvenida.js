@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Swal.fire({
       title:'Bienvenido a CoinPreeview',
       text: "Por favor, acepta nuestros términos y condiciones para continuar.",
-      imageUrl: "../img/cpreviewF.png",
+      imageUrl: "img/cpreviewF.png",
       imageWidth: 200,
       imageHeight: 180,
       imageAlt: "Custom image",
