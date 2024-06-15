@@ -13,37 +13,36 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- archivo de estilos personalizado -->
+    <!--estilos-->
     <link rel="stylesheet" href="css/estilo.css" />
-    <!--Loader Css-->
-    <link rel="stylesheet" href="css/loader.css" />
     <!--Animacion AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Chart.js desde CDN para gráficos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!--favicon-->
     <link
       rel="shortcut icon"
       href="img/CryptoLogotipo.png"
       type="image/x-icon"
     />
+
     <!-- fuente de texto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
       rel="stylesheet"
       type="text/css"
     />
-  </head>
 
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
   <body>
-    <!-- Loader -->
-    <div id="loader-wrapper" class="loaderContenedor">
-      <div id="loader">
-        <div class="custom-loader"></div>
-      </div>
-    </div>
+
     <section data-aos="zoom-in-right">
       <!-- Barra de navegación -->
       <div id="navBar" class="container">
@@ -72,8 +71,7 @@
         </nav>
       </div>
     </section>
-
-    <main id="main-content" class="contenedorCriptomonedas ">
+    <main  class="contenedorCriptomonedas ">
       <!-- Sección principal -->
       <header class="header">
         <div class="container">
@@ -96,7 +94,7 @@
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
                 />
-                <button type="button" class="btn btnRegistro btn-lg px-4">
+                <button id="btnRegistro" type="button" class="btn btnRegistro btn-lg px-4">
                   Registrate
                 </button>
               </div>
@@ -121,8 +119,6 @@
       <section class=" container contenedorLogotipos d-flex justify-content-between">
         
       </section>
-
-
       <div class="container">
         <section data-aos="fade-right" class="contenedorBuscador">
           <div class="container-fluid contenedorCripto">
@@ -139,6 +135,8 @@
               class="container d-flex justify-content-center contenedorLogo"
             ></div>
           </div>
+
+
         </section>
       </div>
       <div
@@ -175,16 +173,19 @@
           </footer>
         </div>
       </footer>
+
+
        <!--Btn Ir Arriba-->
     <button id="btnIrArriba" class="btnIrArriba">
       <img class="btnIr" src="img/irBtn.png" alt="btn">
     </button>
     </main>
+
+
+    <!-- Bienvenida -->
+    <script src="scripts/Bienvenida.js"></script>
     <!--IrArriba-->
     <script src="scripts/btnIr.js"></script>
-    <!--NAVEGADOR-->
-    <script src="navAnimate.js"></script>
-    <script src="scripts/loader.js"></script>
     <!-- Archivo JavaScript personalizado -->
     <script src="./scripts/app.js"></script>
     <!-- Bootstrap JS desde CDN -->

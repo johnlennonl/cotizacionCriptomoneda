@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: repeating-linear-gradient(45deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(22.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(45deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(157.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(96,91,91, 0.03) 0px, rgba(96,91,91, 0.03) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(13,8,63),rgb(36,34,34));
+    background-image: repeating-linear-gradient(135deg, rgba(137,136,141, 0.08) 0px, rgba(137,136,141, 0.08) 1px,transparent 1px, transparent 9px),repeating-linear-gradient(45deg, rgba(137,136,141, 0.08) 0px, rgba(137,136,141, 0.08) 1px,transparent 1px, transparent 9px),linear-gradient(90deg, rgb(34, 16, 41),rgb(16,16,30));
     font-family: 'Allerta', sans-serif;
 }
 
@@ -292,4 +292,7 @@ h1 {
 .btnIr{
     width: 60px;
 }
-
+.swalCustom{
+    font-family: 'Allerta', sans-serif;
+    font-size: 0.9rem;
+}
