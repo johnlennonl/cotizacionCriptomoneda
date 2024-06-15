@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       imageUrl: "../img/cpreviewF.png",
       imageWidth: 200,
       imageHeight: 180,
+      imageAlt: "Custom image",
       showCancelButton: true,
       confirmButtonText: "Aceptar",
       confirmButtonColor: "#7838d3",
