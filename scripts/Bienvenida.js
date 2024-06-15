@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
     Swal.fire({
       title:'Bienvenido a CoinPreeview',
       text: "Por favor, acepta nuestros términos y condiciones para continuar.",
-      imageUrl: "https://img.freepik.com/vector-premium/bitcoin-concepto-diseno-vector-plano-negocio-criptomoneda-blockchain_578300-298.jpg",
+      imageUrl: "../img/cpreviewF.png",
       imageWidth: 200,
       imageHeight: 180,
       showCancelButton: true,
       confirmButtonText: "Aceptar",
       confirmButtonColor: "#7838d3",
       cancelButtonText: "Cancelar",
-      customClass: "swalCustom",
+      customClass: "swalCustom",  
     }).then((result) => {
       if (result.isConfirmed) {
         // Si el usuario acepta, guarda la información en localStorage
