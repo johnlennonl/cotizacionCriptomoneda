@@ -281,8 +281,8 @@ h1 {
 
 .btnIrArriba{
     position: fixed;
-    bottom: 35px;
-    right: 10px;
+    bottom: 75px;
+    right: 1px;
     border-radius: 50px;
     background-color: transparent;
     border: none;

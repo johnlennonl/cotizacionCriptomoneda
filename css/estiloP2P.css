@@ -31,3 +31,11 @@
     width: 400px;
     border: none;
 }
+.contenedorPadre{
+    border: 1px solid rgba(255, 255, 255, 0.348);
+    border-radius: 10px;
+}
+.swal2-input{
+    border:1px solid #7838d3;
+    width: 300px;
+}

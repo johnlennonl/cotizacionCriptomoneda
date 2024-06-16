@@ -32,7 +32,7 @@
 
     <section data-aos="zoom-in-right">
         <!-- Barra de navegación -->
-        <div id="navBar" class="container">
+        <div id="navBar" class="container navbarColors">
           <nav class="d-flex flex-wrap justify-content-center py-3 mx-auto">
             <a
               href="/"
@@ -68,10 +68,10 @@
             <div class="col-lg-6">
               <h1 class="display-5 fw-bold tituloComprar lh-1 mb-3">Crea tu Orden de Compra</h1>
               <p class="lead textoComprar"> Crea tu orden de compra, selecciona la criptomoneda que deseas comprar y el monto que deseas adquirir, 
-                una vez que hayas seleccionado la criptomoneda y el monto, haz clic en el botón "Comprar" y listo!, se creara la orden de compra, en 30mn recibiras ordenes de nuestro equipo.
+                una vez que hayas seleccionado la criptomoneda y el monto, haz clic en el botón "Comprar" y listo!, se creara la orden de compra, en 30min recibiras informacion de nuestro equipo.
               </p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btnComprar btn-lg px-4">
+                <button type="button" id="contactBtn" class="btn btnComprar btn-lg px-4">
                  Contactanos 
                 </button>
               </div>
@@ -79,9 +79,9 @@
           </div>
         </div>
       </header>
-        <div class=" container mt-4 ">
+        <div class=" container mt-4 contenedorPadre">
             <div class="row mt-4 ">
-              <div class="col-md-6 ">
+              <div class="col-md-6">
                 <div class="card contenedorComprar">
                   <div class="card-body mx-auto">
                     <h5 class="card-title text-center mb-3">Comprar Criptomoneda</h5>
@@ -127,6 +127,12 @@
               </div>
             </div>
           </div>
+          
+             <!--Btn Ir Arriba-->
+    <button id="btnIrArriba" class="btnIrArriba">
+      <img class="btnIr" src="../img/irBtn.png" alt="btn">
+    </button>
+    </main>
 
           <!--IconoWs-->
           <section>
@@ -176,6 +182,8 @@
       <!--Scripts-->
     <script src="../scripts/p2p.js"></script>
     <script src="../scripts/loader.js"></script>
+    <script src="../scripts/btnIr.js"></script>
+    <script src="../scripts/contacto.js"></script>
     <!--sweetalert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--AOS-->
