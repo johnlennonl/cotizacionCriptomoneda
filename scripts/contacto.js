@@ -32,8 +32,8 @@ document.getElementById('contactBtn').addEventListener('click', function() {
             console.log(result.value); // datos ingresados
             Swal.fire({
                 title: 'Datos enviados',
-                text: ` Gracias por contactarnos ${result.value.nombre}, en un lapso de 30minutos recibiras un mensaje de nuestro soprote a tu correo electronico:
-                ${result.value.correo} o mediate Whatsapp al numero ingresado: ${result.value.telefono} le agradecemos su paciencia✅`,
+                text: ` Gracias por contactarnos ${result.value.nombre}, en un lapso de 30 minutos recibiras un mensaje de nuestro soporte a tu correo electronico:
+                ${result.value.correo} o mediante Whatsapp al numero ingresado: ${result.value.telefono} le agradecemos su paciencia✅`,
                 icon: 'success'
             });
         }
