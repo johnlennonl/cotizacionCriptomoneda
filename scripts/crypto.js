@@ -1,4 +1,4 @@
-// Array de criptomonedas con sus símbolos y nombres
+// Array de criptomonedas con sus simbolos y nombres
 const cryptocurrencies = [
   { symbol: "BTC", name: "Bitcoin" },
   { symbol: "ETH", name: "Ethereum" },
@@ -29,7 +29,7 @@ cryptocurrencies.forEach((crypto) => {
   seleccionarCriptomoneda.appendChild(option); // Añadir el <option> al elemento de selección
 });
 
-// Función para calcular el valor de una criptomoneda en USD
+// Funcióo para calcular el valor de una criptomoneda en USD
 const calcularValorCriptomoneda = (symbol, amount) => {
   // Construir la URL de la API de Binance para obtener el precio de la criptomoneda
   const url = `https://api.binance.com/api/v3/ticker/price?symbol=${symbol}USDT`;

@@ -11,7 +11,7 @@ fetch("https://api.binance.com/api/v3/ticker/price")
       };
     });
 
-    // Obtener cambios porcentuales de las últimas 24 horas desde Binance
+    // Obtenemos cambios porcentuales de las últimas 24 horas desde Binance
     fetch("https://api.binance.com/api/v3/ticker/24hr")
       .then((response) => response.json()) // Parsear la respuesta JSON
       .then((binanceChangeData) => {
@@ -40,7 +40,7 @@ fetch("https://api.binance.com/api/v3/ticker/price")
           averageChangePercent >= 0 ? "#5ccb5f" : "red"
         };">${averageChangePercent.toFixed(2)}%</span>`;
 
-        // Obtener datos de la Api CoinGecko para más información sobre las criptomonedas
+        // Obtener datos de la Api CoinGecko para mas información sobre las criptomonedas
         return fetch(
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         )
@@ -57,7 +57,7 @@ fetch("https://api.binance.com/api/v3/ticker/price")
               tableBody.innerHTML = ""; // Limpiar el contenido actual de la tabla
 
               geckoData.slice(0, limit).forEach((crypto) => {
-                const binanceSymbol = crypto.symbol.toUpperCase() + "USDT"; // Construir el símbolo Binance
+                const binanceSymbol = crypto.symbol.toUpperCase() + "USDT"; // Construir el simbolo Binance
                 const binancePriceData = binanceMap[binanceSymbol]; // Obtener los datos de precio de Binance
 
                 if (binancePriceData) {

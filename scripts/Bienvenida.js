@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Verifica si el usuario ya ha aceptado los términos y condiciones
+  // Verifica si el usuario ya ha aceptado los terminos y condiciones
   if (!localStorage.getItem("terminosAceptados")) {
-    // Muestra la ventana de bienvenida con términos y condiciones
+    // Muestra la ventana de bienvenida con terminos y condiciones
     Swal.fire({
       title:'Bienvenido a CoinPreeview',
       text: "Por favor, acepta nuestros términos y condiciones para continuar.",
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       customClass: "swalCustom",  
     }).then((result) => {
       if (result.isConfirmed) {
-        // Si el usuario acepta, guarda la información en localStorage
+        // Si el usuario acepta, guardamos la información en localStorage.
         localStorage.setItem("terminosAceptados", "true");
         Swal.fire(
           "Aceptado",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "success"
         );
       } else {
-        // Si el usuario no acepta, puedes redirigirlo o mostrar un mensaje
+        // Si el usuario no acepta, mostramos mensaje de rechazo y redirigimos a la página de inicio.
         Swal.fire(
           "Rechazado",
           "Debe aceptar los términos y condiciones para continuar.",

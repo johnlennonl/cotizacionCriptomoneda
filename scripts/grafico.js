@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', async function() {
     const cryptoMarketCap = document.getElementById('crypto-market-cap');
     let chart;
 
-    // Fetch Bitcoin data de CoinGecko
+    // Fetch Bitcoin de CoinGecko
     const coingeckoResponse = await fetch('https://api.coingecko.com/api/v3/coins/bitcoin');
     const coinGeckoInfo = await coingeckoResponse.json();
 
-    // Fetch historial data de Bitcoin desde Binance
+    // Fetch historial  de Bitcoin desde Binance
     const klinesResponse = await fetch(`https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=30`);
     const klinesData = await klinesResponse.json();
 

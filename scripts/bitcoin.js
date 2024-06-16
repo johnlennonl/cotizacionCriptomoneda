@@ -18,7 +18,7 @@ async function fetchBitcoinData() {
             sitioWeb: "https://bitcoin.org/"
         };
 
-        // Mostrar el contenido del DOM con la información obtenida
+        // Mostrar el contenido del DOM con la informacion obtenida
         const bitcoinInfoDiv = document.getElementById('bitcoin-info');
         bitcoinInfoDiv.innerHTML = `
             <p><strong>Nombre:</strong> ${info.nombre}</p>

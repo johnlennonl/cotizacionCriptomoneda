@@ -16,7 +16,7 @@ fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
     })
     .catch(error => console.error("Error al obtener los datos de CoinGecko:", error));
 
-// Manejar el evento de calculo de solicitud
+// Manejar el evento de cálculo de solicitud
 document.getElementById('calcular-btn').addEventListener('click', function() {
     const seleccionCripto = document.getElementById('seleccion-cripto');
     const montoInput = document.getElementById('monto');
@@ -32,7 +32,7 @@ document.getElementById('calcular-btn').addEventListener('click', function() {
     }
 
     const totalUSD = monto * precioCripto;
-    const totalConTarifa = totalUSD * 1.05; // Añadimoos el 5%
+    const totalConTarifa = totalUSD * 1.05; // Añadimos el 5%
 
     resultadoCalculo.innerHTML = `
         <div class="alert alert-info">
@@ -43,7 +43,7 @@ document.getElementById('calcular-btn').addEventListener('click', function() {
     `;
 });
 
-// evento de envío del formulario de comprat
+// evento de envío del formulario de compra
 document.getElementById('formulario-compra').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -66,7 +66,7 @@ document.getElementById('formulario-compra').addEventListener('submit', function
     }
 
     const totalUSD = monto * precioCripto;
-    const totalConTarifa = totalUSD * 1.05; // Añadimoz el 5%
+    const totalConTarifa = totalUSD * 1.05; // Añadimos el 5%
 
     const solicitud = {
         cripto: opcionSeleccionada.text,
@@ -86,6 +86,9 @@ document.getElementById('formulario-compra').addEventListener('submit', function
     // Limpiar el formulario y el resultado del cálculo
     document.getElementById('formulario-compra').reset();
     document.getElementById('resultado-calculo').innerHTML = '';
+
+    // Actualizar el contador de solicitudes
+    actualizarContadorSolicitudes();
 });
 
 // Función para guardar una solicitud pendiente en el almacenamiento local
@@ -102,12 +105,14 @@ function cargarSolicitudesPendientes() {
 
     solicitudesPendientes.innerHTML = solicitudes.length > 0 ? '' : '<p class="text-center mt-3">Sin solicitudes actualmente</p>';
     solicitudes.forEach(solicitud => agregarSolicitudPendienteDOM(solicitud));
+
+    // Actualizar el contador de solicitudes
+    actualizarContadorSolicitudes();
 }
 
 // Función para añadir una solicitud pendiente al DOM
 function agregarSolicitudPendienteDOM(solicitud) {
     const solicitudesPendientes = document.getElementById('solicitudes-pendientes');
-    solicitudesPendientes.innerHTML = ''; // Limpiar el mensaje de "Sin solicitudes actualmente"
     const solicitudCard = document.createElement('div');
     solicitudCard.className = 'card mt-2';
     solicitudCard.innerHTML = `
@@ -173,14 +178,25 @@ function actualizarAlmacenamientoLocal() {
 
     localStorage.setItem('solicitudesPendientes', JSON.stringify(solicitudes));
     mostrarMensajeSinSolicitudes();
+
+    // Actualizar el contador de solicitudes
+    actualizarContadorSolicitudes();
 }
 
-// Función para mostrar el mensaje de "Sin solicitudes actualmnte" si no hay solicitudes pendientes
+// Función para mostrar el mensaje de "Sin solicitudes actualmente" si no hay solicitudes pendientes
 function mostrarMensajeSinSolicitudes() {
     const solicitudesPendientes = document.getElementById('solicitudes-pendientes');
     if (!solicitudesPendientes.hasChildNodes()) {
         solicitudesPendientes.innerHTML = '<p class="text-center mt-3">Sin solicitudes actualmente</p>';
     }
+}
+
+// Función para actualizar el contador de solicitudes en el ícono del nav
+function actualizarContadorSolicitudes() {
+    let solicitudes = JSON.parse(localStorage.getItem('solicitudesPendientes')) || [];
+    const contadorSolicitudes = document.getElementById('contador-solicitudes');
+    contadorSolicitudes.innerText = solicitudes.length;
+    contadorSolicitudes.style.display = solicitudes.length > 0 ? 'block' : 'none';
 }
 
 // Cargar solicitudes pendientes del almacenamiento local al cargar la página

@@ -17,7 +17,7 @@ document.getElementById('registerBtn').addEventListener('click', function() {
     }).then(() => {
         // Limpia el campo de entrada
         document.getElementById('emailInput').value = '';
-        // Actualiza la página
+        // Actualizar la pgina
         location.reload();
     });
 });
