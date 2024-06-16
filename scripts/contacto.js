@@ -2,7 +2,7 @@
 document.getElementById('contactBtn').addEventListener('click', function() {
     Swal.fire({
         title: 'Contactanos',
-        imageUrl: "img/undraw_personal_email_re_4lx7.svg",
+        imageUrl: "/img/undraw_personal_email_re_4lx7.svg",
         imageWidth: 200,
         imageHeight: 180,
         html:
