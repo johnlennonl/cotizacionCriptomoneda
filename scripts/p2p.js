@@ -183,7 +183,7 @@ function actualizarAlmacenamientoLocal() {
     actualizarContadorSolicitudes();
 }
 
-// Función para mostrar el mensaje de "Sin solicitudes actualmente" si no hay solicitudes pendientes
+// Función para mostrar el mensaje de "Sin solicitudes actualmente" si no hay solicitudes pendientes dentro de la card de Solicitudes de Compra 
 function mostrarMensajeSinSolicitudes() {
     const solicitudesPendientes = document.getElementById('solicitudes-pendientes');
     if (!solicitudesPendientes.hasChildNodes()) {
@@ -191,13 +191,12 @@ function mostrarMensajeSinSolicitudes() {
     }
 }
 
-// Función para actualizar el contador de solicitudes en el ícono del nav
+
 function actualizarContadorSolicitudes() {
     let solicitudes = JSON.parse(localStorage.getItem('solicitudesPendientes')) || [];
+    const tarjetaContenedor = document.querySelector('.contenedorDeComprasPendientes'); // Seleccionar el contenedor de la tarjeta
     const contadorSolicitudes = document.getElementById('contador-solicitudes');
-    contadorSolicitudes.innerText = solicitudes.length;
-    contadorSolicitudes.style.display = solicitudes.length > 0 ? 'block' : 'none';
-}
-
-// Cargar solicitudes pendientes del almacenamiento local al cargar la página
-window.addEventListener('load', cargarSolicitudesPendientes);
+  
+    contadorSolicitudes.innerText = `Tienes ${solicitudes.length} Solicitud de Compra pendiente..`;
+    tarjetaContenedor.style.display = solicitudes.length > 0 ? 'block' : 'none'; // Mostrar o ocultar la tarjeta mientras haya solicitudes pendientes
+  }
