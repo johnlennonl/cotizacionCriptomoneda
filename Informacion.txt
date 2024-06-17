@@ -1,0 +1,8 @@
+Este proyecto esta relacionado con la informacion de las criptomonedas , donde podemos ver precios capitalizacion entre otras cosas de la cripto que se encuentran , tambien hago una calculadora de criptomonedas, 
+donde el usuario podra colocar la cantidad de criptomoneda que quiere consultar a USD ; 
+
+Hago uso de la Api de BINANCE la cual obtenemos la informacion de las criptomonedas relacionadas con el precio, capitalizacion, Precio entre 24hrs y la complementamos con la Api de Coingrecko 
+donde obtubimos el Icono de cada criptomoneda , usamos la  API Charts que nos Implementa Graficos de las criptomonedas donde nos da el valor diario , en este caso solo usamos la criptomoneda Bitcoin 
+ya qye es la mas importante actualmente;
+
+En el proyecto Manejee el DOM Y localstorage para las solicitudes creadas , Tambien hago uso de SweetAlert2  , para crear la ventana de bienvenida , Registro y Contacto.. 

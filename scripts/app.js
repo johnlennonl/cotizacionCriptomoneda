@@ -1,6 +1,6 @@
 // Obtenemos los precios de las criptomonedas desde la Api de Binance
 fetch("https://api.binance.com/api/v3/ticker/price")
-  .then((response) => response.json()) // Parsear la respuesta JSON
+  .then((response) => response.json()) // respuesta JSON
   .then((binanceData) => {
     const binanceMap = {}; // Crear un objeto para mapear los datos de Binance
     binanceData.forEach((crypto) => {

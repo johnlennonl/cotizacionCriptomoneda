@@ -359,3 +359,19 @@ h1 {
 .solicitudesIcon{
     width: 42px;
 }
+
+#nft-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.nft-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.nft-card img {
+    max-width: 100%;
+    height: auto;
+}
